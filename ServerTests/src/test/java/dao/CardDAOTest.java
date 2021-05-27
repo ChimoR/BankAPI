@@ -4,6 +4,7 @@ import app.Initializer;
 import model.Card;
 import org.junit.Test;
 
+import java.io.IOException;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -15,7 +16,7 @@ public class CardDAOTest {
     private CardDAO cardDAO = new CardDAO();
 
     @Test
-    public void shouldReturnValidBalanceAndUserIDForBill() throws SQLException {
+    public void shouldReturnValidBalanceAndUserIDForBill() throws SQLException, IOException {
         PreparedStatement statement =  Initializer.getConnection().prepareStatement("SELECT BALANCE, USERID FROM CARD WHERE BILL_NUMBER = '12345'");
         ResultSet set = statement.executeQuery();
         int DBbalance = 0;
@@ -32,7 +33,7 @@ public class CardDAOTest {
     }
 
     @Test
-    public void shouldReturnValidBalanceForBill() throws SQLException {
+    public void shouldReturnValidBalanceForBill() throws SQLException, IOException {
         PreparedStatement statement =  Initializer.getConnection().prepareStatement("SELECT BALANCE FROM CARD WHERE BILL_NUMBER = '12345'");
         ResultSet set = statement.executeQuery();
         int balance1 = 0;
@@ -44,7 +45,7 @@ public class CardDAOTest {
     }
 
     @Test
-    public void shouldUpdateCorrectAmountCardBalancesForBill() throws SQLException {
+    public void shouldUpdateCorrectAmountCardBalancesForBill() throws SQLException, IOException {
         PreparedStatement statement = Initializer.getConnection().prepareStatement("SELECT NUMBER FROM CARD WHERE BILL_NUMBER = '12345'");
         ResultSet rs = statement.executeQuery();
         int counter = 0;
@@ -57,7 +58,7 @@ public class CardDAOTest {
     }
 
     @Test
-    public void shouldReturnValidCardNumbersForBill() throws SQLException {
+    public void shouldReturnValidCardNumbersForBill() throws SQLException, IOException {
         ResultSet rs = cardDAO.getBillCards("12345");
         rs.next();
 
@@ -68,7 +69,7 @@ public class CardDAOTest {
     }
 
     @Test
-    public void shouldInsertOneCard() {
+    public void shouldInsertOneCard() throws IOException {
         Card card = new Card("2345678901", 123, 777, "11.11.2011", "Third Anonim", "34567", 3);
         assertEquals(cardDAO.addNewCard(card), 1);
     }

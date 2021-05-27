@@ -2,6 +2,7 @@ package app;
 
 import com.sun.net.httpserver.HttpServer;
 import controller.MainHandler;
+import service.Logger;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
@@ -22,13 +23,13 @@ public class Initializer {
             "runscript from 'src/main/resources/initCards'";
 
     /** Метод для вызова всех инициализирующих методов */
-    public static void startServer() {
+    public static void startServer() throws IOException {
         preloadCardNumbers();
         initServer();
     }
 
     /** Предзаплнение листа номерами карт из БД */
-    public static boolean preloadCardNumbers() {
+    public static boolean preloadCardNumbers() throws IOException {
         connection = getConnection();
         try {
             PreparedStatement query = connection.prepareStatement("SELECT NUMBER FROM CARD");
@@ -36,20 +37,23 @@ public class Initializer {
             while (rs.next()) {
                 existingCardNumbers.add(rs.getString(1));
             }
+            Logger.logAction("Card numbers successfully preloaded.");
             return true;
         }
         catch (SQLException ex) {
+            Logger.logException("SQL Exception while preloading card numbers.");
             ex.printStackTrace();
             return false;
         }
     }
 
     /** Запуск http сервера */
-    public static boolean initServer() {
+    public static boolean initServer() throws IOException {
         if (server == null) {
             try {
                 server = HttpServer.create(new InetSocketAddress("localhost", 8080), 0);
             } catch (IOException e) {
+                Logger.logException("IO Exception in server initialization.");
                 e.printStackTrace();
                 return false;
             }
@@ -59,6 +63,8 @@ public class Initializer {
                 server.start();
             }
         }
+
+        Logger.logAction("Server successfully started. \n");
         return true;
     }
 

@@ -7,17 +7,19 @@ import model.Card;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.io.IOException;
+
 import static org.junit.Assert.*;
 
 public class CreateCardHandlerTest {
 
     @Before
-    public void startServer() {
+    public void startServer() throws IOException {
         Initializer.startServer();
     }
 
     @Test
-    public void createCardFromJson() throws JsonProcessingException {
+    public void shouldReturnJSONCardEntity() throws JsonProcessingException {
         String JSON_Card = BankApiClient.createNewCardRequest();
         ObjectMapper mapper = new ObjectMapper();
         Card card = mapper.readValue(JSON_Card, Card.class);

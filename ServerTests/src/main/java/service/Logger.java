@@ -50,6 +50,7 @@ public class Logger {
         BufferedWriter writer = new BufferedWriter(new FileWriter(LOG_FILE, true));
         writer.write(String.format(ACTION_TEMPLATE, date, message));
         writer.close();
+
     }
 
 }

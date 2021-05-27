@@ -20,12 +20,12 @@ import static org.junit.Assert.*;
 public class CheckBalanceHandlerTest {
 
     @Before
-    public void startServer() {
+    public void startServer() throws IOException {
         Initializer.startServer();
     }
 
     @Test
-    public void checkBillBalanceFromJSON() throws JsonProcessingException, SQLException {
+    public void shouldReturnBalanceByBill() throws JsonProcessingException, SQLException {
         PreparedStatement statement =  Initializer.getConnection().prepareStatement("SELECT BALANCE FROM CARD WHERE BILL_NUMBER = '12345'");
         ResultSet set = statement.executeQuery();
         int DBbalance = 0;

@@ -2,7 +2,9 @@ package dao;
 
 import app.Initializer;
 import model.Card;
+import service.Logger;
 
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -20,7 +22,7 @@ public class CardDAO {
      * @param billNumber номер счёта
      * @return ResultSet с балансом и UserID
      */
-    public ResultSet getBalanceAndUserID(String billNumber) {
+    public ResultSet getBalanceAndUserID(String billNumber) throws IOException {
         try {
             PreparedStatement prepStmt = connection.prepareStatement("SELECT BALANCE, USERID FROM CARD " +
                     "WHERE BILL_NUMBER = ?");
@@ -28,6 +30,7 @@ public class CardDAO {
             return prepStmt.executeQuery();
         }
         catch (SQLException throwables) {
+            Logger.logException(throwables.getMessage());
             throwables.printStackTrace();
         }
 
@@ -39,7 +42,7 @@ public class CardDAO {
      * @param billNumber номер счёта
      * @return баланс
      */
-    public int getBalance(String billNumber) {
+    public int getBalance(String billNumber) throws IOException {
         int balance = -1;
         try {
             PreparedStatement prepStmt = connection.prepareStatement("SELECT BALANCE FROM CARD " +
@@ -51,6 +54,7 @@ public class CardDAO {
             }
         }
         catch (SQLException e) {
+            Logger.logException(e.getMessage());
             e.printStackTrace();
         }
 
@@ -62,7 +66,7 @@ public class CardDAO {
      * @param billNumber номер счёта
      * @param newBalance значение, которое буде присвоено балансу
      */
-    public int updateBalance(String billNumber, int newBalance) {
+    public int updateBalance(String billNumber, int newBalance) throws IOException {
         try {
             PreparedStatement prepStmt = connection.prepareStatement("UPDATE CARD SET BALANCE = ? " +
                     "WHERE BILL_NUMBER = ?");
@@ -71,6 +75,7 @@ public class CardDAO {
             return prepStmt.executeUpdate();
         }
         catch (SQLException e) {
+            Logger.logException(e.getMessage());
             e.printStackTrace();
         }
 
@@ -82,7 +87,7 @@ public class CardDAO {
      * @param billNumber номер счёта
      * @return ResultSet из всех столбцов таблицы Card
      */
-    public ResultSet getBillCards(String billNumber) {
+    public ResultSet getBillCards(String billNumber) throws IOException {
         try {
             PreparedStatement prepStmt = connection.prepareStatement("SELECT * FROM CARD " +
                     "WHERE BILL_NUMBER = ?");
@@ -90,6 +95,7 @@ public class CardDAO {
             return prepStmt.executeQuery();
         }
         catch (SQLException e) {
+            Logger.logException(e.getMessage());
             e.printStackTrace();
         }
 
@@ -100,7 +106,7 @@ public class CardDAO {
      * Метод для добавления новой карты в БД
      * @param card объект класса Card
      */
-    public int addNewCard(Card card) {
+    public int addNewCard(Card card) throws IOException {
         try {
             PreparedStatement prepStmt = connection.prepareStatement("INSERT INTO CARD " +
                     "VALUES (?, ?, ?, ?, ?, ?, ?)");
@@ -116,9 +122,32 @@ public class CardDAO {
             return prepStmt.executeUpdate();
         }
         catch (SQLException e) {
+            Logger.logException(e.getMessage());
             e.printStackTrace();
         }
 
         return -1;
+    }
+
+    /**
+     * Метод для проверки существования номера счёта в БД
+     * @param billNumber объект номера счёта
+     * @return boolean
+     */
+    public boolean checkBillNumber(String billNumber) throws IOException {
+        try {
+            PreparedStatement prepStmt = connection.prepareStatement("SELECT * FROM CARD " +
+                    "WHERE BILL_NUMBER = ?");
+
+            prepStmt.setString(1, billNumber);
+
+            ResultSet rs =  prepStmt.executeQuery();
+            return rs.next();
+        }
+        catch (SQLException e) {
+            Logger.logException(e.getMessage());
+            e.printStackTrace();
+            return false;
+        }
     }
 }

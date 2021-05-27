@@ -16,8 +16,8 @@ public class UserDAO {
 
     /**
      * Метод для получения имени и владельца карты по UserID
-     * @param userID
-     * @return
+     * @param userID userID
+     * @return ResultSet содержащий имя и фамилию пользавтеля
      */
     public ResultSet getOwner(int userID) {
         try {

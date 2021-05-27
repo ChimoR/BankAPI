@@ -1,5 +1,7 @@
 package app;
 
+import java.io.IOException;
+
 /**
  * BankAPI - веб-сервис на Http-сервере, формат входящих и исходищих данных - JSON. Имеет 4 энд-поинта:
  * 1) Создание новой карты по номеру счёта и добавление её в БД.
@@ -12,7 +14,7 @@ package app;
  */
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         Initializer.startServer();
     }
 

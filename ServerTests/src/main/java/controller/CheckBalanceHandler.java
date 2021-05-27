@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.sun.net.httpserver.HttpExchange;
 import model.transfer.Balance;
 import model.transfer.BillNumber;
+import model.transfer.Exception;
 import service.Logger;
 
 import java.io.IOException;
@@ -18,21 +19,39 @@ public class CheckBalanceHandler extends BillNumberUnmarshaller {
 
     /**
      * Метод для получения баланса по номеру счёта
-     * @param httpExchange
+     * @param httpExchange httpExchange объект обмена http-запросом и http-ответом
      * @return объект класса Balance в формате JSON
-     * @throws IOException
      */
 
     public static String checkBillBalanceFromJSON(HttpExchange httpExchange) throws IOException {
         Logger.logRequest(httpExchange);
 
         BillNumber billNumber = unmarshallBillNumber(httpExchange);
-        int balance = MainHandler.cardDAO.getBalance(billNumber.getBillNumber());
 
-        Balance balanceObj = new Balance();
-        balanceObj.setBalance(balance);
+        if (billNumber != null) {
+            if (MainHandler.cardDAO.checkBillNumber(billNumber.getBillNumber())) {
+                int balance = MainHandler.cardDAO.getBalance(billNumber.getBillNumber());
 
-        Logger.logAction(String.format(info, billNumber.getBillNumber(), balance));
-        return mapper.writeValueAsString(balanceObj);
+                Balance balanceObj = new Balance();
+                balanceObj.setBalance(balance);
+
+                Logger.logAction(String.format(info, billNumber.getBillNumber(), balance));
+                return mapper.writeValueAsString(balanceObj);
+            }
+            else {
+                Exception exception = new Exception();
+                exception.setMessage("Bill number not found");
+
+                Logger.logException(exception.getMessage());
+                return mapper.writeValueAsString(exception);
+            }
+        }
+        else {
+            Exception exception = new Exception();
+            exception.setMessage("Bill number not found");
+
+            Logger.logException(exception.getMessage());
+            return mapper.writeValueAsString(exception);
+        }
     }
 }

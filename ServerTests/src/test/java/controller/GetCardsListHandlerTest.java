@@ -7,6 +7,7 @@ import model.Card;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.io.IOException;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -17,12 +18,12 @@ import static org.junit.Assert.*;
 public class GetCardsListHandlerTest {
 
     @Before
-    public void startServer() {
+    public void startServer() throws IOException {
         Initializer.startServer();
     }
 
     @Test
-    public void getCardsListByBill() throws JsonProcessingException, SQLException {
+    public void shouldReturnCardsListByBill() throws JsonProcessingException, SQLException {
         PreparedStatement statement = Initializer.getConnection().prepareStatement("SELECT NUMBER FROM CARD WHERE BILL_NUMBER = '12345'");
         ResultSet rs = statement.executeQuery();
         int counter = 0;

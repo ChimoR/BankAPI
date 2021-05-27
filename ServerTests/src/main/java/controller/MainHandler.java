@@ -21,8 +21,7 @@ public class MainHandler implements HttpHandler {
 
     /**
      * Метод, обращающийся к конкретному хэндлеру в зависимости от энд-поинта
-     * @param httpExchange
-     * @throws IOException
+     * @param httpExchange объект обмена http-запросом и http-ответом
      */
     @Override
     public void handle(HttpExchange httpExchange) throws IOException {
@@ -30,39 +29,42 @@ public class MainHandler implements HttpHandler {
         String responseData = null;
 
         if ("POST".equals(httpExchange.getRequestMethod())) {
-            if (httpExchange.getRequestURI().toString().contains("/createcard")) {
+            if (httpExchange.getRequestURI().toString().equals("/createcard")) {
                 try {
                     responseData = CreateCardHandler.createCardFromJson(httpExchange);
                 } catch (SQLException throwables) {
+                    Logger.logException("SQLException " + throwables.getMessage());
                     throwables.printStackTrace();
                 }
             }
 
-            if (httpExchange.getRequestURI().toString().contains("/checkbalance")) {
+            if (httpExchange.getRequestURI().toString().equals("/checkbalance")) {
                 responseData = CheckBalanceHandler.checkBillBalanceFromJSON(httpExchange);
             }
 
-            if (httpExchange.getRequestURI().toString().contains("/cardsbybill")) {
+            if (httpExchange.getRequestURI().toString().equals("/cardsbybill")) {
                 try {
                     responseData = GetCardsListHandler.getCardsListByBill(httpExchange);
                 } catch (SQLException throwables) {
+                    Logger.logException("SQLException " + throwables.getMessage());
                     throwables.printStackTrace();
                 }
             }
 
-            if (httpExchange.getRequestURI().toString().contains("/deposit")) {
+            if (httpExchange.getRequestURI().toString().equals("/deposit")) {
                 responseData = DepositHandler.deposit(httpExchange);
             }
         }
 
-        writeDataToResponse(httpExchange, responseData);
+        if (responseData != null) {
+            writeDataToResponse(httpExchange, responseData);
+        }
     }
 
     /**
      * Метод, записывающий данные в тело ответа на запрос
-     * @param httpExchange
+     * @param httpExchange объект обмена http-запросом и http-ответом
      * @param data данные для записи
-     * @throws IOException
      */
     public static void writeDataToResponse(HttpExchange httpExchange, String data) throws IOException {
         OutputStream outputStream = httpExchange.getResponseBody();
