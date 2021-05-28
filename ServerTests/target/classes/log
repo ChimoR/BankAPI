@@ -7498,3 +7498,451 @@ SELECT * FROM CARDWHERE BILL_NUMBER = ? [42102-200]
 2021.05.27 14:30:23   Exception occurred, message : Bill number not found
 2021.05.27 14:30:23   Sent response on POST request on URI: /cardsbybill 
  
+2021.05.27 14:34:34   Action: Server successfully started. 
+
+2021.05.27 14:34:34   Action: Card numbers successfully preloaded.
+2021.05.27 14:34:34   Action: Card numbers successfully preloaded.
+2021.05.27 14:34:34   Action: Server successfully started. 
+
+2021.05.27 14:34:35   Received POST request on URI: /checkbalance 
+2021.05.27 14:34:35   Action: Checked balance of bill 12345 - 100
+2021.05.27 14:34:35   Sent response on POST request on URI: /checkbalance 
+ 
+2021.05.27 14:34:35   Action: Card numbers successfully preloaded.
+2021.05.27 14:34:35   Action: Server successfully started. 
+
+2021.05.27 14:34:35   Received POST request on URI: /checkbalance 
+2021.05.27 14:34:35   Exception occurred, message : Bill number not found
+2021.05.27 14:34:35   Sent response on POST request on URI: /checkbalance 
+ 
+2021.05.27 14:34:35   Action: Card numbers successfully preloaded.
+2021.05.27 14:34:35   Action: Server successfully started. 
+
+2021.05.27 14:34:35   Received POST request on URI: /createcard 
+2021.05.27 14:34:35   Action: Generated and added new card Card{number='3754234313', expirationDate='27.05.2024', owner='FIRST ANONIM', billNumber='12345', balance=100, cvv=732, userID=1}
+2021.05.27 14:34:35   Sent response on POST request on URI: /createcard 
+ 
+2021.05.27 14:34:35   Action: Card numbers successfully preloaded.
+2021.05.27 14:34:35   Action: Server successfully started. 
+
+2021.05.27 14:34:35   Received POST request on URI: /createcard 
+2021.05.27 14:34:35   Exception occurred, message : Bill number not found
+2021.05.27 14:34:35   Sent response on POST request on URI: /createcard 
+ 
+2021.05.27 14:34:35   Action: Card numbers successfully preloaded.
+2021.05.27 14:34:35   Action: Server successfully started. 
+
+2021.05.27 14:34:35   Received POST request on URI: /deposit 
+2021.05.27 14:34:35   Action: Deposited 200 to bill 12345, new balance = 300
+2021.05.27 14:34:35   Sent response on POST request on URI: /deposit 
+ 
+2021.05.27 14:34:35   Action: Card numbers successfully preloaded.
+2021.05.27 14:34:35   Action: Server successfully started. 
+
+2021.05.27 14:34:35   Received POST request on URI: /deposit 
+2021.05.27 14:34:35   Exception occurred, message : Bill number not found
+2021.05.27 14:34:35   Sent response on POST request on URI: /deposit 
+ 
+2021.05.27 14:34:35   Action: Card numbers successfully preloaded.
+2021.05.27 14:34:35   Action: Server successfully started. 
+
+2021.05.27 14:34:35   Received POST request on URI: /cardsbybill 
+2021.05.27 14:34:35   Action: Received list of cards for bill 12345 : [Card{number='1234567890', expirationDate='11.11.1111', owner='FIRST ANONIM', billNumber='12345', balance=300, cvv=123, userID=1}, Card{number='1234567891', expirationDate='11.11.1111', owner='FIRST ANONIM', billNumber='12345', balance=300, cvv=123, userID=1}, Card{number='3754234313', expirationDate='27.05.2024', owner='FIRST ANONIM', billNumber='12345', balance=300, cvv=732, userID=1}]
+2021.05.27 14:34:35   Sent response on POST request on URI: /cardsbybill 
+ 
+2021.05.27 14:34:35   Action: Card numbers successfully preloaded.
+2021.05.27 14:34:35   Action: Server successfully started. 
+
+2021.05.27 14:34:35   Received POST request on URI: /cardsbybill 
+2021.05.27 14:34:35   Exception occurred, message : Bill number not found
+2021.05.27 14:34:35   Sent response on POST request on URI: /cardsbybill 
+ 
+2021.05.27 15:32:56   Action: Server successfully started. 
+
+2021.05.27 15:32:56   Action: Card numbers successfully preloaded.
+2021.05.27 15:32:56   Action: Card numbers successfully preloaded.
+2021.05.27 15:32:56   Action: Server successfully started. 
+
+2021.05.27 15:32:57   Received POST request on URI: /checkbalance 
+2021.05.27 15:32:57   Action: Checked balance of bill 12345 - 100
+2021.05.27 15:32:57   Sent response on POST request on URI: /checkbalance 
+ 
+2021.05.27 15:32:57   Action: Card numbers successfully preloaded.
+2021.05.27 15:32:57   Action: Server successfully started. 
+
+2021.05.27 15:32:57   Received POST request on URI: /checkbalance 
+2021.05.27 15:32:57   Exception occurred, message : Bill number not found
+2021.05.27 15:32:57   Sent response on POST request on URI: /checkbalance 
+ 
+2021.05.27 15:32:57   Action: Card numbers successfully preloaded.
+2021.05.27 15:32:57   Action: Server successfully started. 
+
+2021.05.27 15:32:57   Received POST request on URI: /createcard 
+2021.05.27 15:32:57   Action: Generated and added new card Card{number='4374351847', expirationDate='27.05.2024', owner='FIRST ANONIM', billNumber='12345', balance=100, cvv=276, userID=1}
+2021.05.27 15:32:57   Sent response on POST request on URI: /createcard 
+ 
+2021.05.27 15:32:57   Action: Card numbers successfully preloaded.
+2021.05.27 15:32:57   Action: Server successfully started. 
+
+2021.05.27 15:32:57   Received POST request on URI: /createcard 
+2021.05.27 15:32:57   Exception occurred, message : Bill number not found
+2021.05.27 15:32:57   Sent response on POST request on URI: /createcard 
+ 
+2021.05.27 15:32:57   Action: Card numbers successfully preloaded.
+2021.05.27 15:32:57   Action: Server successfully started. 
+
+2021.05.27 15:32:57   Received POST request on URI: /deposit 
+2021.05.27 15:32:57   Action: Deposited 200 to bill 12345, new balance = 300
+2021.05.27 15:32:57   Sent response on POST request on URI: /deposit 
+ 
+2021.05.27 15:32:57   Action: Card numbers successfully preloaded.
+2021.05.27 15:32:57   Action: Server successfully started. 
+
+2021.05.27 15:32:57   Received POST request on URI: /deposit 
+2021.05.27 15:32:57   Exception occurred, message : Bill number not found
+2021.05.27 15:32:57   Sent response on POST request on URI: /deposit 
+ 
+2021.05.27 15:32:57   Action: Card numbers successfully preloaded.
+2021.05.27 15:32:57   Action: Server successfully started. 
+
+2021.05.27 15:32:57   Received POST request on URI: /cardsbybill 
+2021.05.27 15:32:57   Action: Received list of cards for bill 12345 : [Card{number='1234567890', expirationDate='11.11.1111', owner='FIRST ANONIM', billNumber='12345', balance=300, cvv=123, userID=1}, Card{number='1234567891', expirationDate='11.11.1111', owner='FIRST ANONIM', billNumber='12345', balance=300, cvv=123, userID=1}, Card{number='4374351847', expirationDate='27.05.2024', owner='FIRST ANONIM', billNumber='12345', balance=300, cvv=276, userID=1}]
+2021.05.27 15:32:57   Sent response on POST request on URI: /cardsbybill 
+ 
+2021.05.27 15:32:57   Action: Card numbers successfully preloaded.
+2021.05.27 15:32:57   Action: Server successfully started. 
+
+2021.05.27 15:32:57   Received POST request on URI: /cardsbybill 
+2021.05.27 15:32:57   Exception occurred, message : Bill number not found
+2021.05.27 15:32:57   Sent response on POST request on URI: /cardsbybill 
+ 
+2021.05.27 15:33:02   Action: Card numbers successfully preloaded.
+2021.05.27 15:33:02   Action: Server successfully started. 
+
+2021.05.27 15:34:35   Received POST request on URI: /createcard 
+2021.05.27 15:34:35   Action: Generated and added new card Card{number='2651229765', expirationDate='27.05.2024', owner='FIRST ANONIM', billNumber='12345', balance=100, cvv=299, userID=1}
+2021.05.27 15:34:35   Sent response on POST request on URI: /createcard 
+ 
+2021.05.27 15:34:35   Received POST request on URI: /deposit 
+2021.05.27 15:34:35   Action: Deposited 200 to bill 12345, new balance = 300
+2021.05.27 15:34:35   Sent response on POST request on URI: /deposit 
+ 
+2021.05.27 15:34:35   Received POST request on URI: /checkbalance 
+2021.05.27 15:34:35   Action: Checked balance of bill 12345 - 300
+2021.05.27 15:34:35   Sent response on POST request on URI: /checkbalance 
+ 
+2021.05.27 15:34:35   Received POST request on URI: /cardsbybill 
+2021.05.27 15:34:35   Action: Received list of cards for bill 12345 : [Card{number='1234567890', expirationDate='11.11.1111', owner='FIRST ANONIM', billNumber='12345', balance=300, cvv=123, userID=1}, Card{number='1234567891', expirationDate='11.11.1111', owner='FIRST ANONIM', billNumber='12345', balance=300, cvv=123, userID=1}, Card{number='2651229765', expirationDate='27.05.2024', owner='FIRST ANONIM', billNumber='12345', balance=300, cvv=299, userID=1}]
+2021.05.27 15:34:35   Sent response on POST request on URI: /cardsbybill 
+ 
+2021.05.28 09:20:00   Action: Card numbers successfully preloaded.
+2021.05.28 09:20:00   Action: Server successfully started. 
+
+2021.05.28 09:20:06   Received POST request on URI: /createcard 
+2021.05.28 09:20:06   Action: Generated and added new card Card{number='3622553582', expirationDate='28.05.2024', owner='FIRST ANONIM', billNumber='12345', balance=100, cvv=773, userID=1}
+2021.05.28 09:20:06   Sent response on POST request on URI: /createcard 
+ 
+2021.05.28 09:20:06   Received POST request on URI: /deposit 
+2021.05.28 09:20:06   Action: Deposited 200 to bill 12345, new balance = 300
+2021.05.28 09:20:06   Sent response on POST request on URI: /deposit 
+ 
+2021.05.28 09:20:06   Received POST request on URI: /checkbalance 
+2021.05.28 09:20:06   Action: Checked balance of bill 12345 - 300
+2021.05.28 09:20:06   Sent response on POST request on URI: /checkbalance 
+ 
+2021.05.28 09:20:06   Received POST request on URI: /cardsbybill 
+2021.05.28 09:20:06   Action: Received list of cards for bill 12345 : [Card{number='1234567890', expirationDate='11.11.1111', owner='FIRST ANONIM', billNumber='12345', balance=300, cvv=123, userID=1}, Card{number='1234567891', expirationDate='11.11.1111', owner='FIRST ANONIM', billNumber='12345', balance=300, cvv=123, userID=1}, Card{number='3622553582', expirationDate='28.05.2024', owner='FIRST ANONIM', billNumber='12345', balance=300, cvv=773, userID=1}]
+2021.05.28 09:20:06   Sent response on POST request on URI: /cardsbybill 
+ 
+2021.05.28 09:27:52   Action: Card numbers successfully preloaded.
+2021.05.28 09:27:52   Action: Server successfully started. 
+
+2021.05.28 09:27:58   Received POST request on URI: /createcard 
+2021.05.28 09:27:58   Action: Generated and added new card Card{number='6915223487', expirationDate='28.05.2024', owner='FIRST ANONIM', billNumber='12345', balance=100, cvv=443, userID=1}
+2021.05.28 09:27:58   Sent response on POST request on URI: /createcard 
+ 
+2021.05.28 09:27:58   Received POST request on URI: /deposit 
+2021.05.28 09:27:58   Action: Deposited 200 to bill 12345, new balance = 300
+2021.05.28 09:27:58   Sent response on POST request on URI: /deposit 
+ 
+2021.05.28 09:27:58   Received POST request on URI: /checkbalance 
+2021.05.28 09:27:58   Action: Checked balance of bill 12345 - 300
+2021.05.28 09:27:58   Sent response on POST request on URI: /checkbalance 
+ 
+2021.05.28 09:27:58   Received POST request on URI: /cardsbybill 
+2021.05.28 09:27:58   Action: Received list of cards for bill 12345 : [Card{number='1234567890', expirationDate='11.11.1111', owner='FIRST ANONIM', billNumber='12345', balance=300, cvv=123, userID=1}, Card{number='1234567891', expirationDate='11.11.1111', owner='FIRST ANONIM', billNumber='12345', balance=300, cvv=123, userID=1}, Card{number='6915223487', expirationDate='28.05.2024', owner='FIRST ANONIM', billNumber='12345', balance=300, cvv=443, userID=1}]
+2021.05.28 09:27:58   Sent response on POST request on URI: /cardsbybill 
+ 
+2021.05.28 09:29:29   Action: Card numbers successfully preloaded.
+2021.05.28 09:29:29   Action: Server successfully started. 
+
+2021.05.28 09:29:33   Received POST request on URI: /createcard 
+2021.05.28 09:29:33   Action: Generated and added new card Card{number='7246543617', expirationDate='28.05.2024', owner='FIRST ANONIM', billNumber='12345', balance=100, cvv=662, userID=1}
+2021.05.28 09:29:33   Sent response on POST request on URI: /createcard 
+ 
+2021.05.28 09:29:33   Received POST request on URI: /deposit 
+2021.05.28 09:29:33   Action: Deposited 200 to bill 12345, new balance = 300
+2021.05.28 09:29:33   Sent response on POST request on URI: /deposit 
+ 
+2021.05.28 09:29:33   Received POST request on URI: /checkbalance 
+2021.05.28 09:29:33   Action: Checked balance of bill 12345 - 300
+2021.05.28 09:29:33   Sent response on POST request on URI: /checkbalance 
+ 
+2021.05.28 09:29:33   Received POST request on URI: /cardsbybill 
+2021.05.28 09:29:33   Action: Received list of cards for bill 12345 : [Card{number='1234567890', expirationDate='11.11.1111', owner='FIRST ANONIM', billNumber='12345', balance=300, cvv=123, userID=1}, Card{number='1234567891', expirationDate='11.11.1111', owner='FIRST ANONIM', billNumber='12345', balance=300, cvv=123, userID=1}, Card{number='7246543617', expirationDate='28.05.2024', owner='FIRST ANONIM', billNumber='12345', balance=300, cvv=662, userID=1}]
+2021.05.28 09:29:33   Sent response on POST request on URI: /cardsbybill 
+ 
+2021.05.28 09:31:30   Action: Card numbers successfully preloaded.
+2021.05.28 09:31:30   Action: Server successfully started. 
+
+2021.05.28 09:31:35   Received POST request on URI: /createcard 
+2021.05.28 09:31:35   Action: Generated and added new card Card{number='9713429879', expirationDate='28.05.2024', owner='FIRST ANONIM', billNumber='12345', balance=100, cvv=752, userID=1}
+2021.05.28 09:31:35   Sent response on POST request on URI: /createcard 
+ 
+2021.05.28 09:31:35   Received POST request on URI: /deposit 
+2021.05.28 09:31:35   Action: Deposited 200 to bill 12345, new balance = 300
+2021.05.28 09:31:35   Sent response on POST request on URI: /deposit 
+ 
+2021.05.28 09:31:35   Received POST request on URI: /checkbalance 
+2021.05.28 09:31:35   Action: Checked balance of bill 12345 - 300
+2021.05.28 09:31:35   Sent response on POST request on URI: /checkbalance 
+ 
+2021.05.28 09:31:35   Received POST request on URI: /cardsbybill 
+2021.05.28 09:31:35   Action: Received list of cards for bill 12345 : [Card{number='1234567890', expirationDate='11.11.1111', owner='FIRST ANONIM', billNumber='12345', balance=300, cvv=123, userID=1}, Card{number='1234567891', expirationDate='11.11.1111', owner='FIRST ANONIM', billNumber='12345', balance=300, cvv=123, userID=1}, Card{number='9713429879', expirationDate='28.05.2024', owner='FIRST ANONIM', billNumber='12345', balance=300, cvv=752, userID=1}]
+2021.05.28 09:31:35   Sent response on POST request on URI: /cardsbybill 
+ 
+2021.05.28 10:17:12   Action: Card numbers successfully preloaded.
+2021.05.28 10:17:12   Action: Server successfully started. 
+
+2021.05.28 10:17:18   Received POST request on URI: /createcard 
+2021.05.28 10:17:18   Action: Generated and added new card Card{number='2456414619', expirationDate='28.05.2024', owner='FIRST ANONIM', billNumber='12345', balance=100, cvv=875, userID=1}
+2021.05.28 10:17:18   Sent response on POST request on URI: /createcard 
+ 
+2021.05.28 10:17:18   Received POST request on URI: /deposit 
+2021.05.28 10:17:18   Action: Deposited 200 to bill 12345, new balance = 300
+2021.05.28 10:17:18   Sent response on POST request on URI: /deposit 
+ 
+2021.05.28 10:17:18   Received POST request on URI: /checkbalance 
+2021.05.28 10:17:18   Action: Checked balance of bill 12345 - 300
+2021.05.28 10:17:18   Sent response on POST request on URI: /checkbalance 
+ 
+2021.05.28 10:17:18   Received POST request on URI: /cardsbybill 
+2021.05.28 10:17:18   Action: Received list of cards for bill 12345 : [Card{number='1234567890', expirationDate='11.11.1111', owner='FIRST ANONIM', billNumber='12345', balance=300, cvv=123, userID=1}, Card{number='1234567891', expirationDate='11.11.1111', owner='FIRST ANONIM', billNumber='12345', balance=300, cvv=123, userID=1}, Card{number='2456414619', expirationDate='28.05.2024', owner='FIRST ANONIM', billNumber='12345', balance=300, cvv=875, userID=1}]
+2021.05.28 10:17:18   Sent response on POST request on URI: /cardsbybill 
+ 
+2021.05.28 10:50:26   Action: Card numbers successfully preloaded.
+2021.05.28 10:50:26   Action: Server successfully started. 
+
+2021.05.28 10:50:30   Received POST request on URI: /createcard 
+2021.05.28 10:50:30   Action: Generated and added new card Card{number='2385879289', expirationDate='28.05.2024', owner='FIRST ANONIM', billNumber='12345', balance=100, cvv=554, userID=1}
+2021.05.28 10:50:30   Sent response on POST request on URI: /createcard 
+ 
+2021.05.28 10:50:30   Received POST request on URI: /deposit 
+2021.05.28 10:50:30   Action: Deposited 200 to bill 12345, new balance = 300
+2021.05.28 10:50:30   Sent response on POST request on URI: /deposit 
+ 
+2021.05.28 10:50:30   Received POST request on URI: /checkbalance 
+2021.05.28 10:50:30   Action: Checked balance of bill 12345 - 300
+2021.05.28 10:50:30   Sent response on POST request on URI: /checkbalance 
+ 
+2021.05.28 10:50:30   Received POST request on URI: /cardsbybill 
+2021.05.28 10:50:30   Action: Received list of cards for bill 12345 : [Card{number='1234567890', expirationDate='11.11.1111', owner='FIRST ANONIM', billNumber='12345', balance=300, cvv=123, userID=1}, Card{number='1234567891', expirationDate='11.11.1111', owner='FIRST ANONIM', billNumber='12345', balance=300, cvv=123, userID=1}, Card{number='2385879289', expirationDate='28.05.2024', owner='FIRST ANONIM', billNumber='12345', balance=300, cvv=554, userID=1}]
+2021.05.28 10:50:30   Sent response on POST request on URI: /cardsbybill 
+ 
+2021.05.28 10:50:56   Received POST request on URI: /createcard 
+2021.05.28 10:50:56   Exception occurred, message : Bill number not found
+2021.05.28 10:50:56   Sent response on POST request on URI: /createcard 
+ 
+2021.05.28 10:50:56   Received POST request on URI: /deposit 
+2021.05.28 10:50:56   Exception occurred, message : Bill number not found
+2021.05.28 10:50:56   Sent response on POST request on URI: /deposit 
+ 
+2021.05.28 10:50:56   Received POST request on URI: /checkbalance 
+2021.05.28 10:50:56   Action: Checked balance of bill 12345 - 300
+2021.05.28 10:50:56   Sent response on POST request on URI: /checkbalance 
+ 
+2021.05.28 10:50:56   Received POST request on URI: /cardsbybill 
+2021.05.28 10:50:56   Exception occurred, message : Bill number not found
+2021.05.28 10:50:56   Sent response on POST request on URI: /cardsbybill 
+ 
+2021.05.28 11:39:05   Action: Card numbers successfully preloaded.
+2021.05.28 11:39:05   Action: Server successfully started. 
+
+2021.05.28 11:39:09   Received POST request on URI: /createcard 
+2021.05.28 11:39:09   Exception occurred, message : Bill number not found
+2021.05.28 11:39:09   Sent response on POST request on URI: /createcard 
+ 
+2021.05.28 11:39:09   Received POST request on URI: /deposit 
+2021.05.28 11:39:09   Exception occurred, message : Bill number not found
+2021.05.28 11:39:09   Sent response on POST request on URI: /deposit 
+ 
+2021.05.28 11:39:09   Received POST request on URI: /checkbalance 
+2021.05.28 11:39:09   Action: Checked balance of bill 12345 - 100
+2021.05.28 11:39:09   Sent response on POST request on URI: /checkbalance 
+ 
+2021.05.28 11:39:09   Received POST request on URI: /cardsbybill 
+2021.05.28 11:39:09   Exception occurred, message : Bill number not found
+2021.05.28 11:39:09   Sent response on POST request on URI: /cardsbybill 
+ 
+2021.05.28 11:39:24   Received POST request on URI: /createcard 
+2021.05.28 11:39:24   Action: Generated and added new card Card{number='2848795355', expirationDate='28.05.2024', owner='FIRST ANONIM', billNumber='12345', balance=100, cvv=859, userID=1}
+2021.05.28 11:39:24   Sent response on POST request on URI: /createcard 
+ 
+2021.05.28 11:39:24   Received POST request on URI: /deposit 
+2021.05.28 11:39:24   Action: Deposited 200 to bill 12345, new balance = 300
+2021.05.28 11:39:24   Sent response on POST request on URI: /deposit 
+ 
+2021.05.28 11:39:24   Received POST request on URI: /checkbalance 
+2021.05.28 11:39:24   Action: Checked balance of bill 12345 - 300
+2021.05.28 11:39:24   Sent response on POST request on URI: /checkbalance 
+ 
+2021.05.28 11:39:24   Received POST request on URI: /cardsbybill 
+2021.05.28 11:39:24   Action: Received list of cards for bill 12345 : [Card{number='1234567890', expirationDate='11.11.1111', owner='FIRST ANONIM', billNumber='12345', balance=300, cvv=123, userID=1}, Card{number='1234567891', expirationDate='11.11.1111', owner='FIRST ANONIM', billNumber='12345', balance=300, cvv=123, userID=1}, Card{number='2848795355', expirationDate='28.05.2024', owner='FIRST ANONIM', billNumber='12345', balance=300, cvv=859, userID=1}]
+2021.05.28 11:39:24   Sent response on POST request on URI: /cardsbybill 
+ 
+2021.05.28 11:46:08   Received POST request on URI: /createcard 
+2021.05.28 11:46:08   Action: Generated and added new card Card{number='6831892895', expirationDate='28.05.2024', owner='FIRST ANONIM', billNumber='12345', balance=300, cvv=484, userID=1}
+2021.05.28 11:46:08   Sent response on POST request on URI: /createcard 
+ 
+2021.05.28 11:46:08   Received POST request on URI: /deposit 
+2021.05.28 11:46:08   Action: Deposited 200 to bill 12345, new balance = 500
+2021.05.28 11:46:08   Sent response on POST request on URI: /deposit 
+ 
+2021.05.28 11:46:08   Received POST request on URI: /checkbalance 
+2021.05.28 11:46:08   Action: Checked balance of bill 12345 - 500
+2021.05.28 11:46:08   Sent response on POST request on URI: /checkbalance 
+ 
+2021.05.28 11:46:08   Received POST request on URI: /cardsbybill 
+2021.05.28 11:46:08   Action: Received list of cards for bill 12345 : [Card{number='1234567890', expirationDate='11.11.1111', owner='FIRST ANONIM', billNumber='12345', balance=500, cvv=123, userID=1}, Card{number='1234567891', expirationDate='11.11.1111', owner='FIRST ANONIM', billNumber='12345', balance=500, cvv=123, userID=1}, Card{number='2848795355', expirationDate='28.05.2024', owner='FIRST ANONIM', billNumber='12345', balance=500, cvv=859, userID=1}, Card{number='6831892895', expirationDate='28.05.2024', owner='FIRST ANONIM', billNumber='12345', balance=500, cvv=484, userID=1}]
+2021.05.28 11:46:08   Sent response on POST request on URI: /cardsbybill 
+ 
+2021.05.28 11:57:03   Received POST request on URI: /createcard 
+2021.05.28 11:57:03   Action: Generated and added new card Card{number='7414611582', expirationDate='28.05.2024', owner='FIRST ANONIM', billNumber='12345', balance=500, cvv=373, userID=1}
+2021.05.28 11:57:03   Sent response on POST request on URI: /createcard 
+ 
+2021.05.28 11:57:11   Received POST request on URI: /cardsbybill 
+2021.05.28 11:57:11   Action: Received list of cards for bill 12345 : [Card{number='1234567890', expirationDate='11.11.1111', owner='FIRST ANONIM', billNumber='12345', balance=500, cvv=123, userID=1}, Card{number='1234567891', expirationDate='11.11.1111', owner='FIRST ANONIM', billNumber='12345', balance=500, cvv=123, userID=1}, Card{number='2848795355', expirationDate='28.05.2024', owner='FIRST ANONIM', billNumber='12345', balance=500, cvv=859, userID=1}, Card{number='6831892895', expirationDate='28.05.2024', owner='FIRST ANONIM', billNumber='12345', balance=500, cvv=484, userID=1}, Card{number='7414611582', expirationDate='28.05.2024', owner='FIRST ANONIM', billNumber='12345', balance=500, cvv=373, userID=1}]
+2021.05.28 11:57:11   Sent response on POST request on URI: /cardsbybill 
+ 
+2021.05.28 11:57:42   Received POST request on URI: /deposit 
+2021.05.28 11:57:42   Action: Deposited 200 to bill 12345, new balance = 700
+2021.05.28 11:57:42   Sent response on POST request on URI: /deposit 
+ 
+2021.05.28 11:57:59   Received POST request on URI: /checkbalance 
+2021.05.28 11:57:59   Action: Checked balance of bill 12345 - 700
+2021.05.28 11:57:59   Sent response on POST request on URI: /checkbalance 
+ 
+2021.05.28 11:58:36   Received POST request on URI: /cardsbybill 
+2021.05.28 11:58:36   Action: Received list of cards for bill 12345 : [Card{number='1234567890', expirationDate='11.11.1111', owner='FIRST ANONIM', billNumber='12345', balance=700, cvv=123, userID=1}, Card{number='1234567891', expirationDate='11.11.1111', owner='FIRST ANONIM', billNumber='12345', balance=700, cvv=123, userID=1}, Card{number='2848795355', expirationDate='28.05.2024', owner='FIRST ANONIM', billNumber='12345', balance=700, cvv=859, userID=1}, Card{number='6831892895', expirationDate='28.05.2024', owner='FIRST ANONIM', billNumber='12345', balance=700, cvv=484, userID=1}, Card{number='7414611582', expirationDate='28.05.2024', owner='FIRST ANONIM', billNumber='12345', balance=700, cvv=373, userID=1}]
+2021.05.28 11:58:36   Sent response on POST request on URI: /cardsbybill 
+ 
+2021.05.28 12:02:58   Received POST request on URI: /createcard 
+2021.05.28 12:02:58   Action: Generated and added new card Card{number='2216883419', expirationDate='28.05.2024', owner='FIRST ANONIM', billNumber='12345', balance=700, cvv=965, userID=1}
+2021.05.28 12:02:58   Sent response on POST request on URI: /createcard 
+ 
+2021.05.28 12:02:58   Received POST request on URI: /deposit 
+2021.05.28 12:02:58   Action: Deposited 100 to bill 12345, new balance = 800
+2021.05.28 12:02:58   Sent response on POST request on URI: /deposit 
+ 
+2021.05.28 12:02:58   Received POST request on URI: /cardsbybill 
+2021.05.28 12:02:58   Action: Received list of cards for bill 12345 : [Card{number='1234567890', expirationDate='11.11.1111', owner='FIRST ANONIM', billNumber='12345', balance=800, cvv=123, userID=1}, Card{number='1234567891', expirationDate='11.11.1111', owner='FIRST ANONIM', billNumber='12345', balance=800, cvv=123, userID=1}, Card{number='2848795355', expirationDate='28.05.2024', owner='FIRST ANONIM', billNumber='12345', balance=800, cvv=859, userID=1}, Card{number='6831892895', expirationDate='28.05.2024', owner='FIRST ANONIM', billNumber='12345', balance=800, cvv=484, userID=1}, Card{number='7414611582', expirationDate='28.05.2024', owner='FIRST ANONIM', billNumber='12345', balance=800, cvv=373, userID=1}, Card{number='2216883419', expirationDate='28.05.2024', owner='FIRST ANONIM', billNumber='12345', balance=800, cvv=965, userID=1}]
+2021.05.28 12:02:58   Sent response on POST request on URI: /cardsbybill 
+ 
+2021.05.28 12:02:58   Received POST request on URI: /checkbalance 
+2021.05.28 12:02:58   Action: Checked balance of bill 12345 - 800
+2021.05.28 12:02:58   Sent response on POST request on URI: /checkbalance 
+ 
+2021.05.28 12:04:19   Received POST request on URI: /createcard 
+2021.05.28 12:04:19   Action: Generated and added new card Card{number='7784841355', expirationDate='28.05.2024', owner='FIRST ANONIM', billNumber='12345', balance=800, cvv=696, userID=1}
+2021.05.28 12:04:19   Sent response on POST request on URI: /createcard 
+ 
+2021.05.28 12:04:19   Received POST request on URI: /checkbalance 
+2021.05.28 12:04:19   Action: Checked balance of bill 12345 - 800
+2021.05.28 12:04:19   Sent response on POST request on URI: /checkbalance 
+ 
+2021.05.28 12:04:19   Received POST request on URI: /cardsbybill 
+2021.05.28 12:04:19   Action: Received list of cards for bill 12345 : [Card{number='1234567890', expirationDate='11.11.1111', owner='FIRST ANONIM', billNumber='12345', balance=800, cvv=123, userID=1}, Card{number='1234567891', expirationDate='11.11.1111', owner='FIRST ANONIM', billNumber='12345', balance=800, cvv=123, userID=1}, Card{number='2848795355', expirationDate='28.05.2024', owner='FIRST ANONIM', billNumber='12345', balance=800, cvv=859, userID=1}, Card{number='6831892895', expirationDate='28.05.2024', owner='FIRST ANONIM', billNumber='12345', balance=800, cvv=484, userID=1}, Card{number='7414611582', expirationDate='28.05.2024', owner='FIRST ANONIM', billNumber='12345', balance=800, cvv=373, userID=1}, Card{number='2216883419', expirationDate='28.05.2024', owner='FIRST ANONIM', billNumber='12345', balance=800, cvv=965, userID=1}, Card{number='7784841355', expirationDate='28.05.2024', owner='FIRST ANONIM', billNumber='12345', balance=800, cvv=696, userID=1}]
+2021.05.28 12:04:19   Sent response on POST request on URI: /cardsbybill 
+ 
+2021.05.28 12:04:19   Received POST request on URI: /deposit 
+2021.05.28 12:04:19   Action: Deposited 200 to bill 12345, new balance = 1000
+2021.05.28 12:04:19   Sent response on POST request on URI: /deposit 
+ 
+2021.05.28 12:07:35   Action: Card numbers successfully preloaded.
+2021.05.28 12:07:35   Action: Server successfully started. 
+
+2021.05.28 12:07:45   Received POST request on URI: /createcard 
+2021.05.28 12:07:45   Action: Generated and added new card Card{number='1966165628', expirationDate='28.05.2024', owner='FIRST ANONIM', billNumber='12345', balance=100, cvv=984, userID=1}
+2021.05.28 12:07:45   Sent response on POST request on URI: /createcard 
+ 
+2021.05.28 12:08:00   Received POST request on URI: /cardsbybill 
+2021.05.28 12:08:00   Action: Received list of cards for bill 12345 : [Card{number='1234567890', expirationDate='11.11.1111', owner='FIRST ANONIM', billNumber='12345', balance=100, cvv=123, userID=1}, Card{number='1234567891', expirationDate='11.11.1111', owner='FIRST ANONIM', billNumber='12345', balance=100, cvv=123, userID=1}, Card{number='1966165628', expirationDate='28.05.2024', owner='FIRST ANONIM', billNumber='12345', balance=100, cvv=984, userID=1}]
+2021.05.28 12:08:00   Sent response on POST request on URI: /cardsbybill 
+ 
+2021.05.28 12:09:38   Action: Card numbers successfully preloaded.
+2021.05.28 12:09:38   Action: Server successfully started. 
+
+2021.05.28 12:09:52   Received POST request on URI: /createcard 
+2021.05.28 12:09:52   Action: Generated and added new card Card{number='3962568854', expirationDate='28.05.2024', owner='FIRST ANONIM', billNumber='12345', balance=100, cvv=958, userID=1}
+2021.05.28 12:09:52   Sent response on POST request on URI: /createcard 
+ 
+2021.05.28 12:10:03   Received POST request on URI: /deposit 
+2021.05.28 12:10:03   Action: Deposited 200 to bill 12345, new balance = 300
+2021.05.28 12:10:03   Sent response on POST request on URI: /deposit 
+ 
+2021.05.28 12:10:14   Received POST request on URI: /checkbalance 
+2021.05.28 12:10:14   Action: Checked balance of bill 12345 - 300
+2021.05.28 12:10:14   Sent response on POST request on URI: /checkbalance 
+ 
+2021.05.28 12:10:21   Received POST request on URI: /cardsbybill 
+2021.05.28 12:10:21   Action: Received list of cards for bill 12345 : [Card{number='1234567890', expirationDate='11.11.1111', owner='FIRST ANONIM', billNumber='12345', balance=300, cvv=123, userID=1}, Card{number='1234567891', expirationDate='11.11.1111', owner='FIRST ANONIM', billNumber='12345', balance=300, cvv=123, userID=1}, Card{number='3962568854', expirationDate='28.05.2024', owner='FIRST ANONIM', billNumber='12345', balance=300, cvv=958, userID=1}]
+2021.05.28 12:10:21   Sent response on POST request on URI: /cardsbybill 
+ 
+2021.05.28 12:10:29   Received POST request on URI: /createcard 
+2021.05.28 12:10:29   Action: Generated and added new card Card{number='3247499634', expirationDate='28.05.2024', owner='FIRST ANONIM', billNumber='12345', balance=300, cvv=449, userID=1}
+2021.05.28 12:10:29   Sent response on POST request on URI: /createcard 
+ 
+2021.05.28 12:10:29   Received POST request on URI: /checkbalance 
+2021.05.28 12:10:29   Action: Checked balance of bill 12345 - 300
+2021.05.28 12:10:29   Sent response on POST request on URI: /checkbalance 
+ 
+2021.05.28 12:10:29   Received POST request on URI: /cardsbybill 
+2021.05.28 12:10:29   Action: Received list of cards for bill 12345 : [Card{number='1234567890', expirationDate='11.11.1111', owner='FIRST ANONIM', billNumber='12345', balance=300, cvv=123, userID=1}, Card{number='1234567891', expirationDate='11.11.1111', owner='FIRST ANONIM', billNumber='12345', balance=300, cvv=123, userID=1}, Card{number='3962568854', expirationDate='28.05.2024', owner='FIRST ANONIM', billNumber='12345', balance=300, cvv=958, userID=1}, Card{number='3247499634', expirationDate='28.05.2024', owner='FIRST ANONIM', billNumber='12345', balance=300, cvv=449, userID=1}]
+2021.05.28 12:10:29   Sent response on POST request on URI: /cardsbybill 
+ 
+2021.05.28 12:10:29   Received POST request on URI: /deposit 
+2021.05.28 12:10:29   Action: Deposited 200 to bill 12345, new balance = 500
+2021.05.28 12:10:29   Sent response on POST request on URI: /deposit 
+ 
+2021.05.28 12:11:07   Received POST request on URI: /createcard 
+2021.05.28 12:11:07   Exception occurred, message : Bill number not found
+2021.05.28 12:11:07   Sent response on POST request on URI: /createcard 
+ 
+2021.05.28 12:11:07   Received POST request on URI: /checkbalance 
+2021.05.28 12:11:07   Exception occurred, message : Bill number not found
+2021.05.28 12:11:07   Sent response on POST request on URI: /checkbalance 
+ 
+2021.05.28 12:11:07   Received POST request on URI: /cardsbybill 
+2021.05.28 12:11:07   Exception occurred, message : Bill number not found
+2021.05.28 12:11:07   Sent response on POST request on URI: /cardsbybill 
+ 
+2021.05.28 12:11:07   Received POST request on URI: /deposit 
+2021.05.28 12:11:07   Exception occurred, message : Bill number not found
+2021.05.28 12:11:07   Sent response on POST request on URI: /deposit 
+ 
+2021.05.28 12:12:10   Received POST request on URI: /createcard 
+2021.05.28 12:12:10   Action: Generated and added new card Card{number='4813271222', expirationDate='28.05.2024', owner='FIRST ANONIM', billNumber='12345', balance=500, cvv=795, userID=1}
+2021.05.28 12:12:10   Sent response on POST request on URI: /createcard 
+ 
+2021.05.28 12:12:10   Received POST request on URI: /checkbalance 
+2021.05.28 12:12:10   Action: Checked balance of bill 12345 - 500
+2021.05.28 12:12:10   Sent response on POST request on URI: /checkbalance 
+ 
+2021.05.28 12:12:10   Received POST request on URI: /cardsbybill 
+2021.05.28 12:12:10   Action: Received list of cards for bill 12345 : [Card{number='1234567890', expirationDate='11.11.1111', owner='FIRST ANONIM', billNumber='12345', balance=500, cvv=123, userID=1}, Card{number='1234567891', expirationDate='11.11.1111', owner='FIRST ANONIM', billNumber='12345', balance=500, cvv=123, userID=1}, Card{number='3962568854', expirationDate='28.05.2024', owner='FIRST ANONIM', billNumber='12345', balance=500, cvv=958, userID=1}, Card{number='3247499634', expirationDate='28.05.2024', owner='FIRST ANONIM', billNumber='12345', balance=500, cvv=449, userID=1}, Card{number='4813271222', expirationDate='28.05.2024', owner='FIRST ANONIM', billNumber='12345', balance=500, cvv=795, userID=1}]
+2021.05.28 12:12:10   Sent response on POST request on URI: /cardsbybill 
+ 
+2021.05.28 12:12:10   Received POST request on URI: /deposit 
+2021.05.28 12:12:10   Action: Deposited 200 to bill 12345, new balance = 700
+2021.05.28 12:12:10   Sent response on POST request on URI: /deposit 
+ 
