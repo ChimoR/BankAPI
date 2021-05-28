@@ -7,19 +7,71 @@ import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.util.EntityUtils;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
 
 public class Main {
 
-    public static void main(String[] args) {
-        createNewCardRequest();
-        sendDepositRequest();
-        sendCheckBalanceRequest();
-        sendCardsListRequest();
+    public static void main(String[] args) throws IOException {
+        String createNewCard = "1 - create new card.";
+        String deposit = "2 - deposit.";
+        String checkBalance = "3 - check balance.";
+        String cardsList = "4 - cards list.";
+        String testAll = "5 - send all requests. Order - create card, check balance, cards list, deposit";
+        String exit = "6 - exit.";
+        boolean flag = true;
+
+        while (flag) {
+            System.out.printf("Choose option:\n%s\n%s\n%s\n%s\n%s\n%s\n", createNewCard, deposit, checkBalance, cardsList, testAll, exit);
+            BufferedReader console = new BufferedReader(new InputStreamReader(System.in));
+            int operation = Integer.parseInt(console.readLine());
+            String billNumber;
+            switch (operation) {
+                case 1 :
+                    System.out.println("Enter bill number");
+                    billNumber = console.readLine();
+                    createNewCardRequest(billNumber);
+                    break;
+
+                case 2 :
+                    System.out.println("Enter bill number");
+                    billNumber = console.readLine();
+                    System.out.println("Enter amount to deposit");
+                    int amount = Integer.parseInt(console.readLine());
+                    sendDepositRequest(billNumber, amount);
+                    break;
+
+                case 3 :
+                    System.out.println("Enter bill number");
+                    billNumber = console.readLine();
+                    sendCheckBalanceRequest(billNumber);
+                    break;
+                case 4 :
+                    System.out.println("Enter bill number");
+                    billNumber = console.readLine();
+                    sendCardsListRequest(billNumber);
+                    break;
+                case 5:
+                    System.out.println("Enter bill number");
+                    billNumber = console.readLine();
+                    System.out.println("Enter amount to deposit");
+                    amount = Integer.parseInt(console.readLine());
+                    createNewCardRequest(billNumber);
+                    sendCheckBalanceRequest(billNumber);
+                    sendCardsListRequest(billNumber);
+                    sendDepositRequest(billNumber, amount);
+                    break;
+                case 6 :
+                    flag = false;
+            }
+        }
     }
 
-    public static void sendCheckBalanceRequest() {
+    public static void sendCheckBalanceRequest(String billNumber) {
         BillNumber b = new BillNumber();
-        b.setBillNumber("12345");
+        b.setBillNumber(billNumber);
         ObjectMapper mapper = new ObjectMapper();
 
         HttpClient httpClient = HttpClientBuilder.create().build();
@@ -37,13 +89,13 @@ public class Main {
             System.out.println(result);
 
         } catch (Exception ex) {
-
+            ex.printStackTrace();
         }
     }
 
-    public static void createNewCardRequest() {
+    public static void createNewCardRequest(String billNumber) {
         BillNumber b = new BillNumber();
-        b.setBillNumber("12345");
+        b.setBillNumber(billNumber);
         ObjectMapper mapper = new ObjectMapper();
 
         HttpClient httpClient = HttpClientBuilder.create().build();
@@ -61,14 +113,14 @@ public class Main {
             System.out.println(result);
 
         } catch (Exception ex) {
-
+            ex.printStackTrace();
         }
     }
 
-    public static void sendDepositRequest() {
+    public static void sendDepositRequest(String billNumber, int amount) {
         Transaction transaction = new Transaction();
-        transaction.setBillNumber("12345");
-        transaction.setAmount(200);
+        transaction.setBillNumber(billNumber);
+        transaction.setAmount(amount);
 
         ObjectMapper mapper = new ObjectMapper();
 
@@ -84,13 +136,13 @@ public class Main {
             System.out.println(result);
 
         } catch (Exception ex) {
-
+            ex.printStackTrace();
         }
     }
 
-    public static void sendCardsListRequest() {
+    public static void sendCardsListRequest(String billNumber) {
         BillNumber b = new BillNumber();
-        b.setBillNumber("12345");
+        b.setBillNumber(billNumber);
         ObjectMapper mapper = new ObjectMapper();
 
         HttpClient httpClient = HttpClientBuilder.create().build();
@@ -108,7 +160,7 @@ public class Main {
             System.out.println(result);
 
         } catch (Exception ex) {
-
+            ex.printStackTrace();
         }
     }
 }
